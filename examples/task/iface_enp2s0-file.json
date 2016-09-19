@@ -7,10 +7,10 @@
     "workflow": {
         "collect": {
             "metrics": {
-                "/intel/procfs/iface/*/bytes_recv": {},
-                "/intel/procfs/iface/*/bytes_sent": {},
-                "/intel/procfs/iface/*/errs_recv": {},
-                "/intel/procfs/iface/*/fifo_recv": {}
+                "/intel/procfs/iface/enp2s0/bytes_recv": {},
+                "/intel/procfs/iface/enp2s0/bytes_sent": {},
+                "/intel/procfs/iface/enp2s0/errs_recv": {},
+                "/intel/procfs/iface/enp2s0/fifo_recv": {}
             },
             "config": {
                 "/intel/procfs/iface": {
