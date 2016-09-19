@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "1s"
+    },
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/intel/procfs/iface/eno1/bytes_recv": {},
+                "/intel/procfs/iface/eno1/bytes_sent": {},
+                "/intel/procfs/iface/eno1/errs_recv": {},
+                "/intel/procfs/iface/eno1/fifo_recv": {}
+            },
+            "config": {
+                "/intel/procfs/iface": {
+                    "proc_path": "/proc"
+                }
+            },
+            "process": [
+                {
+                    "plugin_name": "passthru",
+                    "process": null,
+                    "publish": [
+                        {
+                            "plugin_name": "mock-file",
+                            "config": {
+                                "file": "/tmp/published_interface.log"
+                            }
+                        }
+                    ],
+                    "config": null
+                }
+            ],
+            "publish": null
+        }
+    }
+}
